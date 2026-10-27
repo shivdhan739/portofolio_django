@@ -1,0 +1,22 @@
+HOW TO DEPLOY (Render FREE plan + Brevo email)
+=============================================
+
+1) GitHub
+   - Ya zip che files extract kara. Tya folder madhe manage.py, build.sh, render.yaml disle pahijet.
+   - Tumchya GitHub repo cha root madhe tech files upload kara (junya files replace). Commit karा.
+
+2) Render -> tumchi service -> Environment (keys FAKT ithe taka, code madhe nako)
+   BREVO_API_KEY      = tumchi Brevo API key (xkeysib-...)
+   EMAIL_HOST_USER    = shivdhanshirgole2808@gmail.com
+   ADMIN_EMAIL        = shivdhanshirgole2808@gmail.com
+   (EMAIL_HOST_PASSWORD fakt paid plan var lagto. Free plan var SMTP block ahe.)
+   Save kara -> Manual Deploy -> Deploy latest commit.
+
+3) Brevo -> Senders, Domains & Dedicated IPs -> Senders
+   shivdhanshirgole2808@gmail.com add kara ani verification mail var click kara.
+
+4) Test (shell nako)
+   a) https://<tumchi-site>.onrender.com/admin/ var login kara.
+   b) Mag ughda: https://<tumchi-site>.onrender.com/email-test/
+      Tithe RESULT: OK disla tar mail jat ahe. FAILED -> disla tar tya oli madhe nemka karan asto.
+   c) Contact form cha message pathva ani /admin/ -> Contact messages madhe "Email error" pahа.
